@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Ujian Praktek UTS Semester 1 Kelas 11'
