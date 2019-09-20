@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            android:src="@drawable/icon_pas_2" />
+            android:src="@drawable/ic_launcher_background" />
 
 
         <View
