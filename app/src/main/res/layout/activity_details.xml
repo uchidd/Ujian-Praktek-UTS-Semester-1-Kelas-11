@@ -21,18 +21,6 @@
             android:rotation="180"
             android:src="@drawable/back" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:fontFamily="monospace"
-            android:text="Preview"
-            android:textAlignment="center"
-            android:textColor="#EE5455"
-            android:textSize="29sp"
-            android:textStyle="bold" />
-
     </RelativeLayout>
 
     <LinearLayout
