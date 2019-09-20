@@ -18,7 +18,7 @@
             android:layout_width="49dp"
             android:layout_height="49dp"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/back1" />
+            android:src="@drawable/back" />
 
     </RelativeLayout>
 
