@@ -27,7 +27,7 @@
 
                 <ImageView
                     android:layout_margin="5dp"
-                    android:src="@drawable/back1"
+                    android:src="@drawable/back"
                     android:scaleType="centerCrop"
                     android:layout_weight="1"
                     android:layout_width="50dp"
