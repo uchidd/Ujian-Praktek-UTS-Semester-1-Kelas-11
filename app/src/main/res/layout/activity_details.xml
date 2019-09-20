@@ -64,58 +64,6 @@
 
                         </android.support.v7.widget.CardView>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <android.support.v7.widget.CardView
-                                android:id="@+id/cvFront"
-                                app:cardCornerRadius="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="9dp"
-                                android:layout_marginRight="4.5dp"
-                                android:layout_marginBottom="9dp"
-                                android:backgroundTint="#8BD8BD"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="monospace"
-                                    android:text="Front"
-                                    android:textAlignment="center"
-                                    android:textSize="29sp"
-                                    android:textColor="#2b3252"
-                                    android:textStyle="bold" />
-
-                            </android.support.v7.widget.CardView>
-
-                            <android.support.v7.widget.CardView
-                                android:id="@+id/cvBack"
-                                app:cardCornerRadius="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4.5dp"
-                                android:layout_marginRight="9dp"
-                                android:layout_marginBottom="9dp"
-                                android:backgroundTint="#8BD8BD"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="monospace"
-                                    android:textStyle="bold"
-                                    android:text="Back"
-                                    android:textSize="29sp"
-                                    android:textColor="#2b3252"
-                                    android:textAlignment="center" />
-
-                            </android.support.v7.widget.CardView>
-
-                        </LinearLayout>
 
 
                     </LinearLayout>
