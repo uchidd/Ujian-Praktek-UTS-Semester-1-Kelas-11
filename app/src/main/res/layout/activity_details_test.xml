@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:backgroundTint="#F4ED71"
-        app:cardElevation="@dimen/cardview_compat_inset_shadow"
+        app:cardElevation="@dimen/cardview_default_elevation"
         >
 
         <RelativeLayout
