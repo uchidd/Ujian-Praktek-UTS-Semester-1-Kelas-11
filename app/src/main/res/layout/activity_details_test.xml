@@ -10,7 +10,9 @@
         app:cardCornerRadius="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:backgroundTint="#F4ED71">
+        android:backgroundTint="#F4ED71"
+        app:cardElevation="@dimen/cardview_compat_inset_shadow"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
