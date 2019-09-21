@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#8BD8BD"
+    android:background="#20232A"
     android:gravity="center"
     tools:context=".MainActivity">
 
@@ -19,9 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="Gadget Store"
+            android:text="Shoes Store"
             android:textAlignment="center"
-            android:textColor="#EE5455"
+            android:textColor="#ACBEBE"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -29,14 +29,13 @@
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_background" />
-
+            android:src="@drawable/rk" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="135dp"
             android:layout_marginTop="99dp"
-            android:background="#8BD8BD" />
+            android:background="#20232A" />
 
     </LinearLayout>
 
@@ -47,7 +46,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="39dp"
-        android:backgroundTint="#2b3252"
+        android:backgroundTint="#ACBEBE"
         app:cardCornerRadius="9dp">
 
         <TextView
@@ -57,7 +56,7 @@
             android:fontFamily="monospace"
             android:text="Start Shopping"
             android:textAlignment="center"
-            android:textColor="#FAD744"
+            android:textColor="#20232A"
             android:textSize="25sp"
             android:textStyle="bold" />
 
