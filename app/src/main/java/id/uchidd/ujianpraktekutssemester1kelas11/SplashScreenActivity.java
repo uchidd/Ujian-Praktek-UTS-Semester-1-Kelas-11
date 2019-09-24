@@ -1,5 +1,6 @@
 package id.uchidd.ujianpraktekutssemester1kelas11;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -48,7 +49,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
                             int hasil = progressStatusDefault;
                             if (hasil == 100) {
-                                startActivity(new Intent(SplashScreenActivity.this, ChooseProductActivity.class));
+                                startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
                                 finish();
                             }
                         }
