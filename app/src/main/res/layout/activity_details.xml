@@ -241,7 +241,7 @@
                         <ImageView
                             android:layout_gravity="center"
                             android:padding="10dp"
-                            android:src="@drawable/cart_red"
+                            android:src="@drawable/cart"
                             android:layout_width="50dp"
                             android:layout_height="50dp"/>
 
@@ -252,7 +252,7 @@
                         android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Buy Now"
+                        android:text="Add to Cart"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:typeface="monospace"
