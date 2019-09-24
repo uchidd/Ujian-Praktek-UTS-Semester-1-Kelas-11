@@ -15,8 +15,6 @@ public class ChooseBrandActivity extends AppCompatActivity {
 
     @BindView(R.id.ivBackMain)
     ImageView ivBackMain;
-    @BindView(R.id.cdTest)
-    CardView cdTest;
     @BindView(R.id.vFirst)
     View vFirst;
     @BindView(R.id.vSecond)
