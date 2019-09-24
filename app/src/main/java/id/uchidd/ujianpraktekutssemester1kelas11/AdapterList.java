@@ -30,7 +30,7 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.adapter_list, viewGroup, false);
+                .inflate(R.layout.list_adapter, viewGroup, false);
 
         return new ViewHolder(view);
     }
