@@ -48,7 +48,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
                             int hasil = progressStatusDefault;
                             if (hasil == 100) {
-                                startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+                                startActivity(new Intent(SplashScreenActivity.this, ChooseProductActivity.class));
                                 finish();
                             }
                         }

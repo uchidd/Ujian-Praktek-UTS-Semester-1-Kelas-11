@@ -1,6 +1,5 @@
 package id.uchidd.ujianpraktekutssemester1kelas11;
 
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +18,7 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
     ArrayList<String> text3;
     ArrayList<Integer> image;
 
-    public AdapterList(ArrayList<String> text1, ArrayList<String> text2, ArrayList<String> text3, ArrayList<Integer> image){
+    public AdapterList(ArrayList<String> text1, ArrayList<String> text2, ArrayList<String> text3, ArrayList<Integer> image) {
 
         this.image = image;
         this.text1 = text1;
@@ -57,10 +56,10 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-            ivImage = (ImageView)itemView.findViewById(R.id.ivList);
-            tvText1 = (TextView)itemView.findViewById(R.id.tvList1);
-            tvText2 = (TextView)itemView.findViewById(R.id.tvList2);
-            tvText3 = (TextView)itemView.findViewById(R.id.tvList3);
+            ivImage = (ImageView) itemView.findViewById(R.id.ivList);
+            tvText1 = (TextView) itemView.findViewById(R.id.tvList1);
+            tvText2 = (TextView) itemView.findViewById(R.id.tvList2);
+            tvText3 = (TextView) itemView.findViewById(R.id.tvList3);
         }
     }
 }
