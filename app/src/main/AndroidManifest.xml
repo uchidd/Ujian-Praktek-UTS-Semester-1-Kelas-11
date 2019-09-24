@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ChooseProductActivity"></activity>
-        <activity android:name=".BuyActivity" />
-        <activity android:name=".ChooseBrandActivity" />
-        <activity android:name=".CartActivity" />
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".BuyActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ChooseBrandActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".SplashScreenActivity"></activity>
         <activity android:name=".DetailsActivity" />
         <activity android:name=".MainActivity" />
     </application>

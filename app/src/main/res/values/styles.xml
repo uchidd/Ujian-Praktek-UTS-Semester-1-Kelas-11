@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">#ACBEBE</item>
+        <item name="colorControlNormal">#ACBEBE</item>
+        <item name="colorControlActivated">#ACBEBE</item>
+        <item name="colorControlHighlight">#ACBEBE</item>
     </style>
 
 </resources>
