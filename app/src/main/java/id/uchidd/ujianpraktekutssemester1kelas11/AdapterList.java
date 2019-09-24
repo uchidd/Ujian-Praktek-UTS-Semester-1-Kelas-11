@@ -38,13 +38,14 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
         viewHolder.tvText1.setText(text1.get(i));
-        viewHolder.tvText2.setText(text2.get(i) + " | " + text3.get(i));
+        viewHolder.tvText2.setText(text2.get(i));
+        viewHolder.tvText3.setText(text3.get(i));
         Picasso.get().load(image.get(i)).into(viewHolder.ivImage);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return image.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
