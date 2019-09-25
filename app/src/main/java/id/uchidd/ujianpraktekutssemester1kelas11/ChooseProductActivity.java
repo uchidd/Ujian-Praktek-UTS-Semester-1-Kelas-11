@@ -35,7 +35,7 @@ public class ChooseProductActivity extends AppCompatActivity {
     private ArrayList<String> textName;
     private ArrayList<String> textColor;
     private ArrayList<String> textPrice;
-    private ArrayList<Integer> textDesc;
+    private ArrayList<String> textDesc;
     private ArrayList<Integer> imageList1;
 
     @Override
@@ -116,11 +116,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         textPrice.add("IDR 7.850.000");
 
         textDesc = new ArrayList<>();
-        textDesc.add(R.string.adidas1);
-        textDesc.add(R.string.adidas2);
-        textDesc.add(R.string.adidas3);
-        textDesc.add(R.string.adidas4);
-        textDesc.add(R.string.adidas5);
+        textDesc.add("" + R.string.adidas1);
+        textDesc.add("" + R.string.adidas2);
+        textDesc.add("" + R.string.adidas3);
+        textDesc.add("" + R.string.adidas4);
+        textDesc.add("" + R.string.adidas5);
 
         imageList1 = new ArrayList<>();
         imageList1.add(R.drawable.adidas1);
@@ -206,11 +206,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         textPrice.add("IDR 2.600.000");
 
         textDesc = new ArrayList<>();
-        textDesc.add(R.string.nike1);
-        textDesc.add(R.string.nike2);
-        textDesc.add(R.string.nike3);
-        textDesc.add(R.string.nike4);
-        textDesc.add(R.string.nike5);
+        textDesc.add("" + R.string.nike1);
+        textDesc.add("" + R.string.nike2);
+        textDesc.add("" + R.string.nike3);
+        textDesc.add("" + R.string.nike4);
+        textDesc.add("" + R.string.nike5);
 
         imageList1 = new ArrayList<>();
         imageList1.add(R.drawable.nike1);
@@ -295,11 +295,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         textPrice.add("IDR 7.000.000");
 
         textDesc = new ArrayList<>();
-        textDesc.add(R.string.nb1);
-        textDesc.add(R.string.nb2);
-        textDesc.add(R.string.nb3);
-        textDesc.add(R.string.nb4);
-        textDesc.add(R.string.nb5);
+        textDesc.add("" + R.string.nb1);
+        textDesc.add("" + R.string.nb2);
+        textDesc.add("" + R.string.nb3);
+        textDesc.add("" + R.string.nb4);
+        textDesc.add("" + R.string.nb5);
 
         imageList1 = new ArrayList<>();
         imageList1.add(R.drawable.nb1);
