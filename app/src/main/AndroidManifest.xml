@@ -9,17 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CheckoutActivity"></activity>
-        <activity android:name=".BuyActivity" />
-        <activity android:name=".ChooseProductActivity" />
-        <activity android:name=".ChooseBrandActivity" />
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".CheckoutActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
+        <activity android:name=".BuyActivity">
+
+
+        </activity>
+        <activity android:name=".ChooseProductActivity" />
+        <activity android:name=".ChooseBrandActivity" />
+        <activity android:name=".SplashScreenActivity"></activity>
         <activity android:name=".DetailsActivity" />
         <activity android:name=".MainActivity" />
     </application>

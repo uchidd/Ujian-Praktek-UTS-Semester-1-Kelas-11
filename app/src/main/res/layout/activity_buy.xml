@@ -348,7 +348,7 @@
                                             android:layout_weight="1"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:text="Quantity"
+                                            android:text="Qty"
                                             android:textSize="15sp"
                                             android:textStyle="bold"
                                             android:typeface="monospace"
@@ -500,7 +500,7 @@
                                     android:layout_centerInParent="true"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Name"
+                                    android:text="Recipient"
                                     android:textSize="20sp"
                                     android:textStyle="bold"
                                     android:typeface="monospace"
@@ -686,6 +686,87 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ACBEBE"
+                app:cardElevation="13dp"
+                app:cardMaxElevation="13dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        app:cardCornerRadius="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#20232A"
+                        app:cardElevation="13dp"
+                        app:cardMaxElevation="13dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_centerInParent="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Payment"
+                                android:textSize="30sp"
+                                android:textStyle="bold"
+                                android:typeface="monospace"
+                                android:textColor="#ACBEBE"/>
+
+
+                            <android.support.v7.widget.CardView
+                                app:cardCornerRadius="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="13dp"
+                                app:cardMaxElevation="13dp"
+                                android:backgroundTint="#ACBEBE">
+
+                                <TextView
+                                    android:layout_margin="10dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Method"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:typeface="monospace"
+                                    android:textColor="#20232A"/>
+
+                            </android.support.v7.widget.CardView>
+
+                            <Spinner
+                                android:layout_margin="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
 
             <android.support.v7.widget.CardView
                 android:layout_marginLeft="10dp"
