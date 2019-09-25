@@ -35,6 +35,7 @@ public class ChooseProductActivity extends AppCompatActivity {
     private ArrayList<String> textName;
     private ArrayList<String> textColor;
     private ArrayList<String> textPrice;
+    private ArrayList<String> textDesc;
     private ArrayList<Integer> imageList1;
 
     @Override
@@ -114,12 +115,15 @@ public class ChooseProductActivity extends AppCompatActivity {
         textPrice.add("IDR 1.380.000");
         textPrice.add("IDR 7.850.000");
 
+        textDesc = new ArrayList<>();
+
         imageList1 = new ArrayList<>();
         imageList1.add(R.drawable.adidas1);
         imageList1.add(R.drawable.adidas2);
         imageList1.add(R.drawable.adidas3);
         imageList1.add(R.drawable.adidas4);
         imageList1.add(R.drawable.adidas5);
+
 
         RecyclerView.Adapter adapter = new AdapterList(textName, textColor, textPrice, imageList1);
         rvList.setAdapter(adapter);
