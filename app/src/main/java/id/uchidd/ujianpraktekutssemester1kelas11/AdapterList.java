@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -16,14 +17,16 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
     ArrayList<String> text1;
     ArrayList<String> text2;
     ArrayList<String> text3;
+    ArrayList<String> text4;
     ArrayList<Integer> image;
 
-    public AdapterList(ArrayList<String> text1, ArrayList<String> text2, ArrayList<String> text3, ArrayList<Integer> image) {
+    public AdapterList(ArrayList<String> text1, ArrayList<String> text2, ArrayList<String> text3, ArrayList<String> text4, ArrayList<Integer> image) {
 
         this.image = image;
         this.text1 = text1;
         this.text2 = text2;
         this.text3 = text3;
+        this.text4 = text4;
 
     }
 
@@ -40,6 +43,7 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
         viewHolder.tvText1.setText(text1.get(i));
         viewHolder.tvText2.setText(text2.get(i));
         viewHolder.tvText3.setText(text3.get(i));
+        viewHolder.tvText4.setText(text4.get(i));
         Picasso.get().load(image.get(i)).into(viewHolder.ivImage);
     }
 
@@ -54,6 +58,7 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
         private TextView tvText1;
         private TextView tvText2;
         private TextView tvText3;
+        private TextView tvText4;
 
         public ViewHolder(View itemView) {
             super(itemView);

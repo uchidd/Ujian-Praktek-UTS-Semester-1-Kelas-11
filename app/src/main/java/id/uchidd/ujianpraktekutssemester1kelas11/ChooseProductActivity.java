@@ -35,7 +35,7 @@ public class ChooseProductActivity extends AppCompatActivity {
     private ArrayList<String> textName;
     private ArrayList<String> textColor;
     private ArrayList<String> textPrice;
-    private ArrayList<String> textDesc;
+    private ArrayList<Integer> textDesc;
     private ArrayList<Integer> imageList1;
 
     @Override
@@ -95,7 +95,7 @@ public class ChooseProductActivity extends AppCompatActivity {
         rvList.setLayoutManager(layoutManager);
 
         textName = new ArrayList<>();
-        textName.add("Adidas NMD Human Trail");
+        textName.add("Adidas NMD Hu Trail");
         textName.add("Adidas EQT Support 93/17");
         textName.add("Adidas Yung-1");
         textName.add("Adidas NMD R1");
@@ -116,6 +116,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         textPrice.add("IDR 7.850.000");
 
         textDesc = new ArrayList<>();
+        textDesc.add(R.string.adidas1);
+        textDesc.add(R.string.adidas2);
+        textDesc.add(R.string.adidas3);
+        textDesc.add(R.string.adidas4);
+        textDesc.add(R.string.adidas5);
 
         imageList1 = new ArrayList<>();
         imageList1.add(R.drawable.adidas1);
@@ -125,7 +130,7 @@ public class ChooseProductActivity extends AppCompatActivity {
         imageList1.add(R.drawable.adidas5);
 
 
-        RecyclerView.Adapter adapter = new AdapterList(textName, textColor, textPrice, imageList1);
+        RecyclerView.Adapter adapter = new AdapterList(textName, textColor, textPrice, textDesc, imageList1);
         rvList.setAdapter(adapter);
 
         rvList.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
@@ -143,16 +148,17 @@ public class ChooseProductActivity extends AppCompatActivity {
                 if (child != null && gestureDetector.onTouchEvent(motionEvent)) {
                     int position = rvList.getChildAdapterPosition(child);
 
-                    String brand, text1, text2, text3;
+                    String brand, text1, text2, text3, text4;
                     Integer image1;
 
                     brand = "ADIDAS";
                     text1 = textName.get(position);
                     text2 = textColor.get(position);
                     text3 = textPrice.get(position);
+                    text4 = textDesc.get(position);
                     image1 = imageList1.get(position);
 
-                    pushData(brand, text1, text2, text3, image1);
+                    pushData(brand, text1, text2, text3, text4, image1);
 
                 }
 
@@ -199,6 +205,13 @@ public class ChooseProductActivity extends AppCompatActivity {
         textPrice.add("IDR 2.262.000");
         textPrice.add("IDR 2.600.000");
 
+        textDesc = new ArrayList<>();
+        textDesc.add(R.string.nike1);
+        textDesc.add(R.string.nike2);
+        textDesc.add(R.string.nike3);
+        textDesc.add(R.string.nike4);
+        textDesc.add(R.string.nike5);
+
         imageList1 = new ArrayList<>();
         imageList1.add(R.drawable.nike1);
         imageList1.add(R.drawable.nike2);
@@ -206,7 +219,7 @@ public class ChooseProductActivity extends AppCompatActivity {
         imageList1.add(R.drawable.nike4);
         imageList1.add(R.drawable.nike5);
 
-        RecyclerView.Adapter adapter = new AdapterList(textName, textColor, textPrice, imageList1);
+        RecyclerView.Adapter adapter = new AdapterList(textName, textColor, textPrice, textDesc, imageList1);
         rvList.setAdapter(adapter);
 
         rvList.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
@@ -224,16 +237,17 @@ public class ChooseProductActivity extends AppCompatActivity {
                 if (child != null && gestureDetector.onTouchEvent(motionEvent)) {
                     int position = rvList.getChildAdapterPosition(child);
 
-                    String brand, text1, text2, text3, link;
+                    String brand, text1, text2, text3, text4;
                     Integer image1;
 
                     brand = "NIKE";
                     text1 = textName.get(position);
                     text2 = textColor.get(position);
                     text3 = textPrice.get(position);
+                    text4 = textDesc.get(position);
                     image1 = imageList1.get(position);
 
-                    pushData(brand, text1, text2, text3, image1);
+                    pushData(brand, text1, text2, text3, text4, image1);
 
                 }
 
@@ -280,6 +294,13 @@ public class ChooseProductActivity extends AppCompatActivity {
         textPrice.add("IDR 26.600.000");
         textPrice.add("IDR 7.000.000");
 
+        textDesc = new ArrayList<>();
+        textDesc.add(R.string.nb1);
+        textDesc.add(R.string.nb2);
+        textDesc.add(R.string.nb3);
+        textDesc.add(R.string.nb4);
+        textDesc.add(R.string.nb5);
+
         imageList1 = new ArrayList<>();
         imageList1.add(R.drawable.nb1);
         imageList1.add(R.drawable.nb2);
@@ -287,7 +308,7 @@ public class ChooseProductActivity extends AppCompatActivity {
         imageList1.add(R.drawable.nb4);
         imageList1.add(R.drawable.nb5);
 
-        RecyclerView.Adapter adapter = new AdapterList(textName, textColor, textPrice, imageList1);
+        RecyclerView.Adapter adapter = new AdapterList(textName, textColor, textPrice, textDesc, imageList1);
         rvList.setAdapter(adapter);
 
         rvList.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
@@ -305,16 +326,17 @@ public class ChooseProductActivity extends AppCompatActivity {
                 if (child != null && gestureDetector.onTouchEvent(motionEvent)) {
                     int position = rvList.getChildAdapterPosition(child);
 
-                    String brand, text1, text2, text3;
+                    String brand, text1, text2, text3, text4;
                     Integer image1;
 
                     brand = "New Balance";
                     text1 = textName.get(position);
                     text2 = textColor.get(position);
                     text3 = textPrice.get(position);
+                    text4 = textPrice.get(position);
                     image1 = imageList1.get(position);
 
-                    pushData(brand, text1, text2, text3, image1);
+                    pushData(brand, text1, text2, text3, text4, image1);
 
                 }
 
@@ -334,13 +356,14 @@ public class ChooseProductActivity extends AppCompatActivity {
         });
     }
 
-    private void pushData(String brand, String text1, String text3, String text4, Integer image1) {
+    private void pushData(String brand, String text1, String text3, String text4, String text5, Integer image1) {
 
         Bundle bundle = new Bundle();
         bundle.putString("BRAND", brand);
         bundle.putString("NAME", text1);
         bundle.putString("COLOR", text3);
         bundle.putString("PRICE", text4);
+        bundle.putString("DESC", text5);
         bundle.putInt("IMAGE1", image1);
 
         Intent goToDetailProduk = new Intent(this, DetailsActivity.class);
