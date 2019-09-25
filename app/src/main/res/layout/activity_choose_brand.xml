@@ -43,7 +43,7 @@
                 <ImageView
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:src="@drawable/share"
+                    android:src="@drawable/search"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"/>
 

@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".ChooseProductActivity" />
         <activity android:name=".ChooseBrandActivity" />
-        <activity android:name=".CartActivity" />
         <activity android:name=".SplashScreenActivity" ></activity>
         <activity android:name=".DetailsActivity" />
         <activity android:name=".MainActivity" />
