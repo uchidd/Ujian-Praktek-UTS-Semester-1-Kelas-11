@@ -356,7 +356,7 @@ public class ChooseProductActivity extends AppCompatActivity {
         });
     }
 
-    private void pushData(String brand, String text1, String text3, String text4, String text5, Integer image1) {
+    private void pushData(String brand, String text1, String text3, String text4, String text5, Integer image) {
 
         Bundle bundle = new Bundle();
         bundle.putString("BRAND", brand);
@@ -364,7 +364,7 @@ public class ChooseProductActivity extends AppCompatActivity {
         bundle.putString("COLOR", text3);
         bundle.putString("PRICE", text4);
         bundle.putString("DESC", text5);
-        bundle.putInt("IMAGE1", image1);
+        bundle.putInt("IMAGE", image);
 
         Intent goToDetailProduk = new Intent(this, DetailsActivity.class);
         goToDetailProduk.putExtras(bundle);
