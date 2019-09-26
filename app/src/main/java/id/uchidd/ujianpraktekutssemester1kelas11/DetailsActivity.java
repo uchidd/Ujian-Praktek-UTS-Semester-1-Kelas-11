@@ -43,6 +43,8 @@ public class DetailsActivity extends AppCompatActivity {
         ivBackCP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
+                finishAffinity();
                 finish();
             }
         });
@@ -86,9 +88,9 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-//        startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
-//        finishAffinity();
-//        finish();
+        startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
+        finishAffinity();
+        finish();
     }
 
     public void hideNavigationBar() {
