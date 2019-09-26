@@ -39,28 +39,6 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
         ButterKnife.bind(this);
 
-        ivBackCP.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
-        Bundle getData = getIntent().getExtras();
-        String getBrand = getData.getString("BRAND");
-        String getName = getData.getString("NAME");
-        String getColor = getData.getString("COLOR");
-        String getPrice = getData.getString("PRICE");
-        String getDesc = getData.getString("DESC");
-        final Integer getImage = getData.getInt("IMAGE");
-
-        Picasso.get().load(getImage).into(ivImage);
-        tvDetails1.setText(getBrand);
-        tvDetails2.setText(getName);
-        tvDetails3.setText(getColor);
-        tvDetails4.setText(getPrice);
-        tvDetails5.setText(getDesc);
-
         hideNavigationBar();
     }
 
