@@ -163,6 +163,7 @@
                                                         app:cardMaxElevation="13dp">
 
                                                         <ImageView
+                                                            android:id="@+id/ivProductOD"
                                                             android:src="@drawable/adidas1"
                                                             android:layout_width="match_parent"
                                                             android:layout_height="200dp"/>
@@ -175,6 +176,7 @@
                                             </android.support.v7.widget.CardView>
 
                                             <TextView
+                                                android:id="@+id/tvBrandOD"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_marginRight="10dp"
                                                 android:layout_marginTop="10dp"
@@ -187,6 +189,7 @@
                                                 android:textColor="#20232A"/>
 
                                             <TextView
+                                                android:id="@+id/tvNameOD"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_marginRight="10dp"
                                                 android:layout_width="match_parent"
@@ -198,6 +201,7 @@
                                                 android:textColor="#20232A"/>
 
                                             <TextView
+                                                android:id="@+id/tvColorOD"
                                                 android:layout_marginLeft="10dp"
                                                 android:layout_marginRight="10dp"
                                                 android:layout_marginBottom="10dp"
@@ -265,6 +269,7 @@
                                                 android:orientation="horizontal">
 
                                                 <TextView
+                                                    android:id="@+id/tvPriceOD"
                                                     android:gravity="center"
                                                     android:layout_gravity="center"
                                                     android:layout_weight="1"
@@ -305,21 +310,37 @@
                                         android:padding="10dp"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:orientation="horizontal">
+                                        android:orientation="vertical">
 
-                                        <TextView
-                                            android:gravity="center"
-                                            android:layout_gravity="center"
-                                            android:layout_weight="1"
+                                        <android.support.v7.widget.CardView
+                                            android:layout_marginLeft="5dp"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:text="Size"
-                                            android:textSize="15sp"
-                                            android:textStyle="bold"
-                                            android:typeface="monospace"
-                                            android:textColor="#ACBEBE"/>
+                                            android:layout_weight="1"
+                                            app:cardCornerRadius="10dp"
+                                            android:backgroundTint="#ACBEBE">
+
+                                            <TextView
+                                                android:layout_margin="10dp"
+                                                android:gravity="center"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="1"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Size"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"
+                                                android:typeface="monospace"
+                                                android:textColor="#20232A"/>
+
+
+                                        </android.support.v7.widget.CardView>
 
                                         <Spinner
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:id="@+id/spinnerSizeOD"
                                             android:layout_weight="1"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"/>
@@ -340,21 +361,37 @@
                                         android:padding="10dp"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:orientation="horizontal">
+                                        android:orientation="vertical">
 
-                                        <TextView
-                                            android:gravity="center"
-                                            android:layout_gravity="center"
-                                            android:layout_weight="1"
+                                        <android.support.v7.widget.CardView
+                                            android:layout_marginLeft="5dp"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:text="Qty"
-                                            android:textSize="15sp"
-                                            android:textStyle="bold"
-                                            android:typeface="monospace"
-                                            android:textColor="#ACBEBE"/>
+                                            android:layout_weight="1"
+                                            app:cardCornerRadius="10dp"
+                                            android:backgroundTint="#ACBEBE">
+
+                                            <TextView
+                                                android:layout_margin="10dp"
+                                                android:gravity="center"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="1"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Qty"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"
+                                                android:typeface="monospace"
+                                                android:textColor="#20232A"/>
+
+
+                                        </android.support.v7.widget.CardView>
 
                                         <Spinner
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:id="@+id/spinnerQtyOD"
                                             android:layout_weight="1"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"/>
@@ -421,6 +458,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/tvTotalOD"
                                     android:gravity="center"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
@@ -509,6 +547,7 @@
                             </android.support.v7.widget.CardView>
 
                             <EditText
+                                android:id="@+id/etRecipientOD"
                                 android:inputType="textPersonName"
                                 android:lines="1"
                                 android:maxLines="1"
@@ -541,6 +580,7 @@
                             </android.support.v7.widget.CardView>
 
                             <EditText
+                                android:id="@+id/etPhoneOD"
                                 android:lines="1"
                                 android:maxLines="1"
                                 android:inputType="number"
@@ -573,6 +613,7 @@
                             </android.support.v7.widget.CardView>
 
                             <EditText
+                                android:id="@+id/etAddressOD"
                                 android:lines="1"
                                 android:maxLines="3"
                                 android:inputType="textShortMessage"
@@ -605,6 +646,7 @@
                             </android.support.v7.widget.CardView>
 
                             <Spinner
+                                android:id="@+id/spinnerMethodShippingOD"
                                 android:layout_margin="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
@@ -666,6 +708,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/tvTaxOD"
                                     android:gravity="center"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
@@ -754,6 +797,7 @@
                             </android.support.v7.widget.CardView>
 
                             <Spinner
+                                android:id="@+id/spinnerMethodPaymentOD"
                                 android:layout_margin="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
@@ -769,6 +813,7 @@
 
 
             <android.support.v7.widget.CardView
+                android:id="@+id/cvCheckoutOD"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"

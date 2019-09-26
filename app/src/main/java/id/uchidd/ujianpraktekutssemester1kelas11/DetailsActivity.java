@@ -48,10 +48,10 @@ public class DetailsActivity extends AppCompatActivity {
         });
 
         Bundle getData = getIntent().getExtras();
-        String getBrand = getData.getString("BRAND");
-        String getName = getData.getString("NAME");
-        String getColor = getData.getString("COLOR");
-        String getPrice = getData.getString("PRICE");
+        final String getBrand = getData.getString("BRAND");
+        final String getName = getData.getString("NAME");
+        final String getColor = getData.getString("COLOR");
+        final String getPrice = getData.getString("PRICE");
         final Integer getDesc = getData.getInt("DESC");
         final Integer getImage = getData.getInt("IMAGE");
 
@@ -62,7 +62,32 @@ public class DetailsActivity extends AppCompatActivity {
         tvDetails4.setText(getPrice);
         tvDetails5.setText(getDesc);
 
+        cvAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                pushData(getBrand, getName, getColor, getPrice,getDesc, getImage);
+
+            }
+        });
+
         hideNavigationBar();
+    }
+
+    private void pushData(String brand, String text1, String text3, String text4, Integer text5, Integer image) {
+
+        Bundle bundle = new Bundle();
+        bundle.putString("BRAND", brand);
+        bundle.putString("NAME", text1);
+        bundle.putString("COLOR", text3);
+        bundle.putString("PRICE", text4);
+        bundle.putInt("DESC", text5);
+        bundle.putInt("IMAGE", image);
+
+        Intent goToDetailProduk = new Intent(this, BuyActivity.class);
+        goToDetailProduk.putExtras(bundle);
+        startActivity(goToDetailProduk);
+
     }
 
     @Override
