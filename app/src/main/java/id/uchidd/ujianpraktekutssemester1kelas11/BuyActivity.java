@@ -102,8 +102,6 @@ public class BuyActivity extends AppCompatActivity {
 
         int ukuran = spinnerSizeOD.getSelectedItem().hashCode();
         int jumlah = spinnerQtyOD.getSelectedItem().hashCode();
-        int harga = getPrice
-        tvTotalOD.setText();
 
     }
 }
