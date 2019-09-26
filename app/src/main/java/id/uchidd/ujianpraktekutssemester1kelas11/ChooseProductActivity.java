@@ -109,11 +109,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         textColor.add("Black Reflective");
 
         textPrice = new ArrayList<>();
-        textPrice.add("IDR 3.800.000");
-        textPrice.add("IDR 3.150.000");
-        textPrice.add("IDR 2.850.000");
-        textPrice.add("IDR 1.380.000");
-        textPrice.add("IDR 7.850.000");
+        textPrice.add("IDR 3800000");
+        textPrice.add("IDR 3150000");
+        textPrice.add("IDR 2850000");
+        textPrice.add("IDR 1380000");
+        textPrice.add("IDR 7850000");
 
         textDesc = new ArrayList<>();
         textDesc.add(R.string.adidas1);
@@ -199,11 +199,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         textColor.add("Patrick Star");
 
         textPrice = new ArrayList<>();
-        textPrice.add("IDR 4.250.000");
-        textPrice.add("IDR 9.000.000");
-        textPrice.add("IDR 35.000.000");
-        textPrice.add("IDR 2.262.000");
-        textPrice.add("IDR 2.600.000");
+        textPrice.add("IDR 4250000");
+        textPrice.add("IDR 9000000");
+        textPrice.add("IDR 35000000");
+        textPrice.add("IDR 2262000");
+        textPrice.add("IDR 2600000");
 
         textDesc = new ArrayList<>();
         textDesc.add(R.string.nike1);
@@ -288,11 +288,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         textColor.add("Grey Day");
 
         textPrice = new ArrayList<>();
-        textPrice.add("IDR 6.400.000");
-        textPrice.add("IDR 5.200.000");
-        textPrice.add("IDR 5.300.000");
-        textPrice.add("IDR 26.600.000");
-        textPrice.add("IDR 7.000.000");
+        textPrice.add("IDR 6400000");
+        textPrice.add("IDR 5200000");
+        textPrice.add("IDR 5300000");
+        textPrice.add("IDR 26600000");
+        textPrice.add("IDR 7000000");
 
         textDesc = new ArrayList<>();
         textDesc.add(R.string.nb1);

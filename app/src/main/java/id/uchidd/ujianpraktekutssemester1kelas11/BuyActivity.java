@@ -102,14 +102,23 @@ public class BuyActivity extends AppCompatActivity {
         spinnerQtyOD.setAdapter(adapterJumlah);
 
         int ukuran = spinnerSizeOD.getSelectedItem().hashCode();
-        int jumlah = spinnerQtyOD.getSelectedItem().hashCode();
-        String hargaString = getPrice.replaceAll("[^0-9]", "");
-        int hargaInt = Integer.parseInt(hargaString);
-        int totalHarga = hargaInt * jumlah;
 
-        tvTotalOD.setText("IDR " + totalHarga);
+        spinnerQtyOD.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        Toast.makeText(this, "" + hargaInt, Toast.LENGTH_SHORT).show();
+                int jumlah = spinnerQtyOD.getSelectedItem().hashCode();
+                String hargaString = getPrice.replaceAll("[^0-9]", "");
+                int hargaInt = Integer.parseInt(hargaString);
+                int totalHarga = hargaInt * jumlah;
+                tvTotalOD.setText("IDR " + totalHarga);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
     }
 }
