@@ -65,6 +65,7 @@ public class DetailsActivity extends AppCompatActivity {
         hideNavigationBar();
     }
 
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
