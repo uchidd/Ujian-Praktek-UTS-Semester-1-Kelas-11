@@ -62,15 +62,33 @@ public class DetailsActivity extends AppCompatActivity {
         tvDetails4.setText(getPrice);
         tvDetails5.setText(getDesc);
 
+        pushData(getBrand, getName, getColor, getPrice, getImage);
+
         hideNavigationBar();
+    }
+
+    private void pushData(String brand, String text1, String text3, String text4, Integer image) {
+
+        Bundle bundle = new Bundle();
+        bundle.putString("BRAND", brand);
+        bundle.putString("NAME", text1);
+        bundle.putString("COLOR", text3);
+        bundle.putString("PRICE", text4);
+        bundle.putInt("IMAGE", image);
+
+        Intent goToDetailProduk = new Intent(this, BuyActivity.class);
+        goToDetailProduk.putExtras(bundle);
+        startActivity(goToDetailProduk);
+        return;
+
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        //startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
-        //finishAffinity();
-        finish();
+//        startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
+//        finishAffinity();
+//        finish();
     }
 
     public void hideNavigationBar() {

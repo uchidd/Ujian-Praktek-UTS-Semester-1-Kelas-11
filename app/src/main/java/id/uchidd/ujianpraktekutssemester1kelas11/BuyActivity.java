@@ -106,7 +106,7 @@ public class BuyActivity extends AppCompatActivity {
         String hargaString = getPrice.replaceAll("[^0-9]", "");
         int hargaInt = Integer.parseInt(hargaString);
 
-        Toast.makeText(this, "" + hargaString + hargaInt, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "" + hargaInt, Toast.LENGTH_SHORT).show();
 
     }
 }
