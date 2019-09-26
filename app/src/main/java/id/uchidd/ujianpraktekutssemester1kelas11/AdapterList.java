@@ -19,7 +19,7 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ViewHolder> {
     ArrayList<String> text3;
     ArrayList<Integer> image;
 
-    public AdapterList(ArrayList<String> text1, ArrayList<String> text2, ArrayList<String> text3, ArrayList<String> text4, ArrayList<Integer> image) {
+    public AdapterList(ArrayList<String> text1, ArrayList<String> text2, ArrayList<String> text3, ArrayList<Integer> text4, ArrayList<Integer> image) {
 
         this.image = image;
         this.text1 = text1;

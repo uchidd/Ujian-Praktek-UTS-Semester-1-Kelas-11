@@ -7,6 +7,7 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -51,7 +52,7 @@ public class DetailsActivity extends AppCompatActivity {
         String getName = getData.getString("NAME");
         String getColor = getData.getString("COLOR");
         String getPrice = getData.getString("PRICE");
-        String getDesc = getData.getString("DESC");
+        final Integer getDesc = getData.getInt("DESC");
         final Integer getImage = getData.getInt("IMAGE");
 
         Picasso.get().load(getImage).into(ivImage);
