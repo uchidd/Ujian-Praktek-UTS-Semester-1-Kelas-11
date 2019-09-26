@@ -95,11 +95,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         rvList.setLayoutManager(layoutManager);
 
         textName = new ArrayList<>();
-        textName.add("Adidas NMD Hu Trail");
-        textName.add("Adidas EQT Support 93/17");
-        textName.add("Adidas Yung-1");
-        textName.add("Adidas NMD R1");
-        textName.add("Adidas Ultra Boost 1.0");
+        textName.add("NMD Hu Trail");
+        textName.add("EQT Support 93/17");
+        textName.add("Yung-1");
+        textName.add("NMD R1");
+        textName.add("Ultra Boost 1.0");
 
         textColor = new ArrayList<>();
         textColor.add("Sun Calm");
@@ -185,11 +185,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         rvList.setLayoutManager(layoutManager);
 
         textName = new ArrayList<>();
-        textName.add("Nike Air Presto Mid Acronym");
-        textName.add("Nike LD Waffle Sacai");
-        textName.add("Nike Air Yeezy 2");
-        textName.add("Nike Air Max 1");
-        textName.add("Nike Kyrie 5");
+        textName.add("Air Presto Mid Acronym");
+        textName.add("LD Waffle Sacai");
+        textName.add("Air Yeezy 2");
+        textName.add("Air Max 1");
+        textName.add("Kyrie 5");
 
         textColor = new ArrayList<>();
         textColor.add("Racer Pink");
@@ -274,11 +274,11 @@ public class ChooseProductActivity extends AppCompatActivity {
         rvList.setLayoutManager(layoutManager);
 
         textName = new ArrayList<>();
-        textName.add("New Balance 997 OG");
-        textName.add("New Balance 997S");
-        textName.add("New Balance 990 V5 Engineered");
-        textName.add("New Balance OMN1S Kawhi");
-        textName.add("New Balance 997 2019");
+        textName.add("997 OG");
+        textName.add("997S");
+        textName.add("990 V5 Engineered");
+        textName.add("OMN1S Kawhi");
+        textName.add("997 2019");
 
         textColor = new ArrayList<>();
         textColor.add("Kith United Arrows and Sons");
