@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -102,6 +103,10 @@ public class BuyActivity extends AppCompatActivity {
 
         int ukuran = spinnerSizeOD.getSelectedItem().hashCode();
         int jumlah = spinnerQtyOD.getSelectedItem().hashCode();
+        String hargaString = getPrice.replaceAll("[^0-9]", "");
+        int hargaInt = Integer.parseInt(hargaString);
+
+        Toast.makeText(this, "" + hargaString + hargaInt, Toast.LENGTH_SHORT).show();
 
     }
 }
