@@ -19,6 +19,9 @@ import butterknife.ButterKnife;
 
 public class BuyActivity extends AppCompatActivity {
 
+    int getJumlahBeli;
+    String getTotalHargaText, getMethod, getTax;
+
     @BindView(R.id.ivProductOD)
     ImageView ivProductOD;
     @BindView(R.id.tvBrandOD)
@@ -103,17 +106,22 @@ public class BuyActivity extends AppCompatActivity {
         adapterJumlah.setDropDownViewResource(R.layout.spinner_list);
         spinnerQtyOD.setAdapter(adapterJumlah);
 
-        int ukuran = spinnerSizeOD.getSelectedItem().hashCode();
+        final int ukuran = spinnerSizeOD.getSelectedItem().hashCode();
 
         spinnerQtyOD.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                int jumlah = spinnerQtyOD.getSelectedItem().hashCode();
+                int jumlahBeli = spinnerQtyOD.getSelectedItem().hashCode();
                 String hargaString = getPrice.replaceAll("[^0-9]", "");
                 int hargaInt = Integer.parseInt(hargaString);
-                int totalHarga = hargaInt * jumlah;
-                tvTotalOD.setText("IDR " + totalHarga);
+                int totalHarga = hargaInt * jumlahBeli;
+                String totalHargaText = "IDR " + totalHarga;
+
+                tvTotalOD.setText(totalHargaText);
+
+                getJumlahBeli = jumlahBeli;
+                getTotalHargaText = totalHargaText;
             }
 
             @Override
@@ -131,15 +139,27 @@ public class BuyActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if (spinnerMethodShippingOD.getSelectedItem().toString() == "Instant"){
-                    String tax1= "IDR 15000";
+                if (spinnerMethodShippingOD.getSelectedItem().toString().equals("Instant")){
+                    String method1 = spinnerMethodShippingOD.getSelectedItem().toString();
+                    String tax1 = "IDR 15000";
                     tvTaxOD.setText(tax1);
-                } else if (spinnerMethodShippingOD.getSelectedItem().toString() == "Same Day") {
-                    String tax2= "IDR 10000";
+
+                    getMethod = method1;
+                    getTax = tax1;
+                } else if (spinnerMethodShippingOD.getSelectedItem().toString().equals("Same Day")) {
+                    String method2 = spinnerMethodShippingOD.getSelectedItem().toString();
+                    String tax2 = "IDR 10000";
                     tvTaxOD.setText(tax2);
-                } else if (spinnerMethodShippingOD.getSelectedItem().toString() == "Regular") {
-                    String tax3= "IDR 5000";
+
+                    getMethod = method2;
+                    getTax = tax2;
+                } else if (spinnerMethodShippingOD.getSelectedItem().toString().equals("Regular")) {
+                    String method3 = spinnerMethodShippingOD.getSelectedItem().toString();
+                    String tax3 = "IDR 5000";
                     tvTaxOD.setText(tax3);
+
+                    getMethod = method3;
+                    getTax = tax3;
                 }
             }
 
@@ -163,10 +183,25 @@ public class BuyActivity extends AppCompatActivity {
                 final String alamat = String.valueOf(etAddressOD.getText());
                 String methodPay = spinnerMethodPaymentOD.getSelectedItem().toString();
 
-                Toast.makeText(BuyActivity.this, nama + telp + alamat + methodPay, Toast.LENGTH_SHORT).show();
+                Toast.makeText(BuyActivity.this, getBrand + " " +
+                        getName + " " + getColor + " " + getPrice + " " + ukuran + " " +
+                        getJumlahBeli + " " + getTotalHargaText + " " + nama + " " + telp + " " + alamat + " " + getMethod + " " + getTax + " " + methodPay + " " , Toast.LENGTH_SHORT).show();
 
             }
         });
 
+        hideNavigationBar();
     }
+
+    public void hideNavigationBar() {
+
+        this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+    }
+
 }
