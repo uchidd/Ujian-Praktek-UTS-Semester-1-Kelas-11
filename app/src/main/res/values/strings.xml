@@ -15,4 +15,15 @@
     <string name="nb3">New York-based Engineered Garments and New England reppin’ New Balance come together to give the latest update of the 990V5 a new theme. The three colorways available take their idea from the originally available 990s, and this grey iteration might be the most famous one. The contrasting shades of grey with tonal alligator-like leather give the Engineered Garments x New Balance 900 a fresh look, classic, but with a twist, that makes it even more desirable.</string>
     <string name="nb4">&quot;K&quot; branding on the 997S’ tongue matches the logo on the tall OMN1s sneaker, also bolstered by hits of gold across the upper. The shiny lace loops sit atop a cool-hued knit, complete with a stretchy strap that keeps the wearer’s foot in place. Black leather and mesh near the ankle aid the white midsole in grounding the hefty shoe, which is completed with black “NB” branding set into its translucent outsole.</string>
     <string name="nb5">A fan-favourite silhouette in best-in-the-business grey, this American-made 997 from New Balance is a reimagining of the classic. With an upper exactly as expected – from the luxe pigskin suede to the reflective 3M ‘N’ sidewall logo – the underfoot has been altered to match modern demands. Maintaining the all-important ENCAP® technology, the sole has been taken from the brand’s ‘sport’ models, altering the sneaker’s lines while maintaining the overall aesthetic sneakerheads all know and love.</string>
+
+    <string-array name="metodePengiriman">
+        <item>Instant</item>
+        <item>Same Day</item>
+        <item>Regular</item>
+    </string-array>
+    <string-array name="metodePembayaran">
+        <item>Cash On Delivery</item>
+        <item>Debit</item>
+        <item>Credit</item>
+    </string-array>
 </resources>
