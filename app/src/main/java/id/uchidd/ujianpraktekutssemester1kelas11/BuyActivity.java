@@ -1,5 +1,6 @@
 package id.uchidd.ujianpraktekutssemester1kelas11;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -183,14 +184,63 @@ public class BuyActivity extends AppCompatActivity {
                 final String alamat = String.valueOf(etAddressOD.getText());
                 String methodPay = spinnerMethodPaymentOD.getSelectedItem().toString();
 
-                Toast.makeText(BuyActivity.this, getBrand + " " +
-                        getName + " " + getColor + " " + getPrice + " " + ukuran + " " +
-                        getJumlahBeli + " " + getTotalHargaText + " " + nama + " " + telp + " " + alamat + " " + getMethod + " " + getTax + " " + methodPay + " " , Toast.LENGTH_SHORT).show();
+                Toast.makeText(BuyActivity.this,
+                        getBrand + " " +
+                        getName + " " +
+                        getColor + " " +
+                        getPrice + " " +
+                        ukuran + " " +
+                        getJumlahBeli + " " +
+                        getTotalHargaText + " " +
+                        nama + " " +
+                        telp + " " +
+                        alamat + " " +
+                        getMethod + " " +
+                        getTax + " " +
+                        methodPay + " " , Toast.LENGTH_SHORT).show();
+
+                pushData(getBrand, getName, getColor, getPrice, ukuran, getJumlahBeli, getTotalHargaText, nama, telp, alamat, getMethod, getTax, methodPay);
 
             }
         });
 
         hideNavigationBar();
+    }
+
+    private void pushData(String brand,
+                          String name,
+                          String color,
+                          String price,
+                          Integer ukuran,
+                          Integer jumlahBeli,
+                          String totalHargaText,
+                          String nama,
+                          String telp,
+                          String alamat,
+                          String pengiriman,
+                          String tax,
+                          String pembayaran) {
+
+        Bundle bundle = new Bundle();
+        bundle.putString("BRAND", brand);
+        bundle.putString("NAME", name);
+        bundle.putString("COLOR", color);
+        bundle.putString("PRICE", price);
+        bundle.putInt("UKURAN", ukuran);
+        bundle.putInt("JUMLAHBELI", jumlahBeli);
+        bundle.putString("TOTALHARGATEXT", totalHargaText);
+        bundle.putString("NAMA", nama);
+        bundle.putString("TELP", telp);
+        bundle.putString("ALAMAT", alamat);
+        bundle.putString("PENGIRIMAN", pengiriman);
+        bundle.putString("TAX", tax);
+        bundle.putString("PEMBAYARAN", pembayaran);
+
+        Intent goToDetailProduk = new Intent(this, DetailsActivity.class);
+        goToDetailProduk.putExtras(bundle);
+        startActivity(goToDetailProduk);
+        return;
+
     }
 
     public void hideNavigationBar() {
