@@ -87,6 +87,8 @@ public class BuyActivity extends AppCompatActivity {
         final String getPrice = getData.getString("PRICE");
         final Integer getImage = getData.getInt("IMAGE");
 
+        int notelp;
+
         Picasso.get().load(getImage).into(ivProductOD);
         tvBrandOD.setText(getBrand);
         tvNameOD.setText(getName);
@@ -116,6 +118,52 @@ public class BuyActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        ArrayAdapter<CharSequence> adapterMethodPengiriman = ArrayAdapter.createFromResource(BuyActivity.this, R.array.metodePengiriman, R.layout.spinner_checked);
+        adapterMethodPengiriman.setDropDownViewResource(R.layout.spinner_list);
+        spinnerMethodShippingOD.setAdapter(adapterMethodPengiriman);
+
+
+        spinnerMethodShippingOD.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (spinnerMethodShippingOD.getSelectedItem().toString() == "Instant"){
+                    String tax1= "IDR 15000";
+                    tvTaxOD.setText(tax1);
+                } else if (spinnerMethodShippingOD.getSelectedItem().toString() == "Same Day") {
+                    String tax2= "IDR 10000";
+                    tvTaxOD.setText(tax2);
+                } else if (spinnerMethodShippingOD.getSelectedItem().toString() == "Regular") {
+                    String tax3= "IDR 5000";
+                    tvTaxOD.setText(tax3);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        ArrayAdapter<CharSequence> adapterMethodPembayaran = ArrayAdapter.createFromResource(BuyActivity.this, R.array.metodePembayaran, R.layout.spinner_checked);
+        adapterMethodPembayaran.setDropDownViewResource(R.layout.spinner_list);
+        spinnerMethodPaymentOD.setAdapter(adapterMethodPembayaran);
+
+        cvCheckoutOD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final String nama = String.valueOf(etRecipientOD.getText());
+                String no = String.valueOf(etPhoneOD.getText());
+                final String telp = no;
+                final String alamat = String.valueOf(etAddressOD.getText());
+                String methodPay = spinnerMethodPaymentOD.getSelectedItem().toString();
+
+                Toast.makeText(BuyActivity.this, nama + telp + alamat + methodPay, Toast.LENGTH_SHORT).show();
 
             }
         });
