@@ -46,21 +46,21 @@ public class ChooseProductActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences(preference, Context.MODE_PRIVATE);
 
-        ivBackCB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ChooseProductActivity.this, ChooseBrandActivity.class));
-                finishAffinity();
-                finish();
-            }
-        });
+//        ivBackCB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //startActivity(new Intent(ChooseProductActivity.this, ChooseBrandActivity.class));
+//                //finishAffinity();
+//                //finish();
+//            }
+//        });
 
         Bundle getData = getIntent().getExtras();
         brand = getData.getString("BRAND");
 
         autoSaveBrandinOnCreate();
 
-        if (sharedPreferences.contains(safeBrand)){
+        if (sharedPreferences.contains(safeBrand)) {
             saveData = sharedPreferences.getString(safeBrand, "");
         }
 
@@ -373,13 +373,13 @@ public class ChooseProductActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(ChooseProductActivity.this, ChooseBrandActivity.class));
-        finishAffinity();
-        finish();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        startActivity(new Intent(ChooseProductActivity.this, ChooseBrandActivity.class));
+//        finishAffinity();
+//        finish();
+//    }
 
     public void hideNavigationBar() {
 

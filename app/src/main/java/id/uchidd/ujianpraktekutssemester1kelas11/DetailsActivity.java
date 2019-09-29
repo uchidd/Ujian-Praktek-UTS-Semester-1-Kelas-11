@@ -40,14 +40,14 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
         ButterKnife.bind(this);
 
-        ivBackCP.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
-                finishAffinity();
-                finish();
-            }
-        });
+//        ivBackCP.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
+//                finishAffinity();
+//                finish();
+//            }
+//        });
 
         Bundle getData = getIntent().getExtras();
         String getBrand = getData.getString("BRAND");
@@ -69,29 +69,34 @@ public class DetailsActivity extends AppCompatActivity {
         hideNavigationBar();
     }
 
-    private void pushData(String brand, String text1, String text3, String text4, Integer image) {
+    public void pushData(String brand, String text1, String text3, String text4, Integer image) {
 
-        Bundle bundle = new Bundle();
+        final Bundle bundle = new Bundle();
         bundle.putString("BRAND", brand);
         bundle.putString("NAME", text1);
         bundle.putString("COLOR", text3);
         bundle.putString("PRICE", text4);
         bundle.putInt("IMAGE", image);
 
-        Intent goToDetailProduk = new Intent(this, BuyActivity.class);
-        goToDetailProduk.putExtras(bundle);
-        startActivity(goToDetailProduk);
-        return;
+        cvAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToDetailProduk = new Intent(DetailsActivity.this, BuyActivity.class);
+                goToDetailProduk.putExtras(bundle);
+                startActivity(goToDetailProduk);
+                return;
+            }
+        });
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
-        finishAffinity();
-        finish();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
+//        finishAffinity();
+//        finish();
+//    }
 
     public void hideNavigationBar() {
 
