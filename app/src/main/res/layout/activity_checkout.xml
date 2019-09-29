@@ -195,6 +195,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/tvDetail1"
                                     android:gravity="center"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
@@ -265,6 +266,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/tvDetail2"
                                     android:gravity="center"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
@@ -335,6 +337,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/tvDetail3"
                                     android:gravity="center"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
@@ -405,6 +408,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/tvDetail4"
                                     android:gravity="center"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
@@ -475,16 +479,17 @@
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    android:gravity="center"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:id="@+id/tvDetail5"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
                                     android:text="45"
+                                    android:textColor="#20232A"
                                     android:textSize="15sp"
                                     android:textStyle="bold"
-                                    android:typeface="monospace"
-                                    android:textColor="#20232A"/>
+                                    android:typeface="monospace" />
 
                             </LinearLayout>
 
@@ -545,6 +550,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/tvDetail6"
                                     android:gravity="center"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
@@ -615,6 +621,7 @@
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/tvDetail7"
                                     android:gravity="center"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
@@ -713,6 +720,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvCheckout1"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:layout_weight="1"
@@ -782,6 +790,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvCheckout2"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:layout_weight="1"
@@ -851,6 +860,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvCheckout3"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:layout_weight="1"
@@ -920,6 +930,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvCheckout4"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:layout_weight="1"
@@ -989,6 +1000,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvCheckout5"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:layout_weight="1"
@@ -1087,6 +1099,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvCheckout6"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:layout_weight="1"
@@ -1138,6 +1151,7 @@
                     </android.support.v7.widget.CardView>
 
                     <TextView
+                        android:id="@+id/tvCheckout7"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
@@ -1162,7 +1176,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/cvAddToCart"
+                android:id="@+id/cvSaveTransaction"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"

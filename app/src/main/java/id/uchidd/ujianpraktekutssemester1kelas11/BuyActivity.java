@@ -236,7 +236,7 @@ public class BuyActivity extends AppCompatActivity {
         bundle.putString("TAX", tax);
         bundle.putString("PEMBAYARAN", pembayaran);
 
-        Intent goToDetailProduk = new Intent(this, DetailsActivity.class);
+        Intent goToDetailProduk = new Intent(this, CheckoutActivity.class);
         goToDetailProduk.putExtras(bundle);
         startActivity(goToDetailProduk);
         return;
