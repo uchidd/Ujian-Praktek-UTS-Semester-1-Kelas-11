@@ -40,14 +40,14 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
         ButterKnife.bind(this);
 
-//        ivBackCP.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
-//                finishAffinity();
-//                finish();
-//            }
-//        });
+        ivBackCP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DetailsActivity.this, ChooseProductActivity.class));
+                finishAffinity();
+                finish();
+            }
+        });
 
         Bundle getData = getIntent().getExtras();
         String getBrand = getData.getString("BRAND");

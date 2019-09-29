@@ -46,14 +46,14 @@ public class ChooseProductActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences(preference, Context.MODE_PRIVATE);
 
-//        ivBackCB.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //startActivity(new Intent(ChooseProductActivity.this, ChooseBrandActivity.class));
-//                //finishAffinity();
-//                //finish();
-//            }
-//        });
+        ivBackCB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooseProductActivity.this, ChooseBrandActivity.class));
+                finishAffinity();
+                finish();
+            }
+        });
 
         Bundle getData = getIntent().getExtras();
         brand = getData.getString("BRAND");
