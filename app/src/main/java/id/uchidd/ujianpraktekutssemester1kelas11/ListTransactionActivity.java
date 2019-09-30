@@ -1,21 +1,31 @@
 package id.uchidd.ujianpraktekutssemester1kelas11;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import id.uchidd.ujianpraktekutssemester1kelas11.model.DatabaseHelper;
 import id.uchidd.ujianpraktekutssemester1kelas11.model.ListTransaction;
 import id.uchidd.ujianpraktekutssemester1kelas11.utils.AdapterListTransaction;
 import id.uchidd.ujianpraktekutssemester1kelas11.utils.RecycleTouchListener;
 
 public class ListTransactionActivity extends AppCompatActivity {
+
+    @BindView(R.id.ivBackCB)
+    ImageView ivBackCB;
+    @BindView(R.id.rvList)
+    RecyclerView rvList;
+    @BindView(R.id.linear_layout_main)
+    LinearLayout linearLayoutMain;
 
     private AdapterListTransaction AdapterListTransaction;
     private List<ListTransaction> ListTransaction = new ArrayList<>();
@@ -28,9 +38,10 @@ public class ListTransactionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_transaction);
+        ButterKnife.bind(this);
 
-        linearLayout = (LinearLayout)findViewById(R.id.linear_layout_main);
-        rv_listtransaction = (RecyclerView)findViewById(R.id.rvList);
+        linearLayout = (LinearLayout) findViewById(R.id.linear_layout_main);
+        rv_listtransaction = (RecyclerView) findViewById(R.id.rvList);
 
         db = new DatabaseHelper(this);
         ListTransaction.addAll(db.getAllNotes());
@@ -40,8 +51,6 @@ public class ListTransactionActivity extends AppCompatActivity {
         rv_listtransaction.setLayoutManager(layoutManager);
 
         rv_listtransaction.setAdapter(AdapterListTransaction);
-
-        toggleEmptyNote();
 
         rv_listtransaction.addOnItemTouchListener(new RecycleTouchListener(this,
                 rv_listtransaction, new RecycleTouchListener.ClickListener() {
@@ -55,7 +64,20 @@ public class ListTransactionActivity extends AppCompatActivity {
 
             }
         }));
-    }
-    private void toggleEmptyNote() {
+
+//        Bundle getData = getIntent().getExtras();
+//        String getBrand = getData.getString("BRAND");
+//        String getName = getData.getString("NAME");
+//        String getColor = getData.getString("COLOR");
+//        String getUkuran = getData.getString("UKURAN");
+//        String getJumlahBeli = getData.getString("JUMLAHBELI");
+//        String getTotalHargaText = getData.getString("TOTALHARGATEXT");
+//
+//        tv1.setText(getBrand);
+//        tv2.setText(getName);
+//        tv3.setText(getColor);
+//        tv4.setText(getUkuran);
+//        tv5.setText(getJumlahBeli);
+//        tv6.setText(getTotalHargaText);
     }
 }
