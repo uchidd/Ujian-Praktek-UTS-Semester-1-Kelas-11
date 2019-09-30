@@ -13,10 +13,10 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // DATABASE NAME
-    private static final String DATABASE_NAME = "db_notes.db";
+    private static final String DATABASE_NAME = "db_list_transaction.db";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
