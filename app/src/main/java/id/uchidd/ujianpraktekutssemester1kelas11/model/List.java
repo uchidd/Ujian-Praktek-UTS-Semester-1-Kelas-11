@@ -1,6 +1,6 @@
 package id.uchidd.ujianpraktekutssemester1kelas11.model;
 
-public class Lists {
+public class List {
 
     public static final String TABLE_NAME = "tbl_list_transaction" ;
 
@@ -59,26 +59,26 @@ public class Lists {
                     COLUMN_TRANSACTIONDATE + " DATETIME DEFAULT CURRENT_TIMESTAMP" +
                     ")";
 
-    public Lists() {
+    public List() {
 
     }
 
-    public Lists(int id,
-                 String brand,
-                 String name,
-                 String color,
-                 String price,
-                 int size,
-                 int quantity,
-                 String subtotal,
-                 String recipient,
-                 String phone,
-                 String address,
-                 String methodshipping,
-                 String tax,
-                 String methodpayment,
-                 String total,
-                 String transactiondate) {
+    public List(int id,
+                String brand,
+                String name,
+                String color,
+                String price,
+                int size,
+                int quantity,
+                String subtotal,
+                String recipient,
+                String phone,
+                String address,
+                String methodshipping,
+                String tax,
+                String methodpayment,
+                String total,
+                String transactiondate) {
 
         this.id = id;
         this.brand = brand;
