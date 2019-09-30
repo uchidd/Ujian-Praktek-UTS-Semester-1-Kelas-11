@@ -65,19 +65,19 @@ public class ListTransactionActivity extends AppCompatActivity {
             }
         }));
 
-        Bundle getData = getIntent().getExtras();
-        String getBrand = getData.getString("BRAND");
-        String getName = getData.getString("NAME");
-        String getColor = getData.getString("COLOR");
-        String getUkuran = getData.getString("UKURAN");
-        String getJumlahBeli = getData.getString("JUMLAHBELI");
-        String getTotalHargaText = getData.getString("TOTALHARGATEXT");
-
-        tv1.setText(getBrand);
-        tv2.setText(getName);
-        tv3.setText(getColor);
-        tv4.setText(getUkuran);
-        tv5.setText(getJumlahBeli);
-        tv6.setText(getTotalHargaText);
+//        Bundle getData = getIntent().getExtras();
+//        String getBrand = getData.getString("BRAND");
+//        String getName = getData.getString("NAME");
+//        String getColor = getData.getString("COLOR");
+//        String getUkuran = getData.getString("UKURAN");
+//        String getJumlahBeli = getData.getString("JUMLAHBELI");
+//        String getTotalHargaText = getData.getString("TOTALHARGATEXT");
+//
+//        tv1.setText(getBrand);
+//        tv2.setText(getName);
+//        tv3.setText(getColor);
+//        tv4.setText(getUkuran);
+//        tv5.setText(getJumlahBeli);
+//        tv6.setText(getTotalHargaText);
     }
 }
