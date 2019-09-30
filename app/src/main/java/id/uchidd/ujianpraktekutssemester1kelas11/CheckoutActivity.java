@@ -1,8 +1,11 @@
 package id.uchidd.ujianpraktekutssemester1kelas11;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -87,5 +90,29 @@ public class CheckoutActivity extends AppCompatActivity {
         tvCheckout5.setText(getTax);
         tvCheckout6.setText(getPembayaran);
         tvCheckout7.setText(totalString);
+
+        pushData (getBrand, getName, getColor, getUkuran, getJumlahBeli, getTotalHargaText);
+    }
+
+    public void pushData(String brand, String text1, Integer text2, Integer text3, Integer text4 String price) {
+
+        final Bundle bundle = new Bundle();
+        bundle.putString("BRAND", brand);
+        bundle.putString("NAME", text1);
+        bundle.putInt("COLOR", text2);
+        bundle.putInt("UKURAN", text3);
+        bundle.putInt("JUMLAHBELI", text4);
+        bundle.putString("TOTALHARGATEXT", price);
+
+        cvSaveTransaction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToDetailProduk = new Intent(CheckoutActivity.this, ListTransactionActivity.class);
+                goToDetailProduk.putExtras(bundle);
+                startActivity(goToDetailProduk);
+                return;
+            }
+        });
+
     }
 }

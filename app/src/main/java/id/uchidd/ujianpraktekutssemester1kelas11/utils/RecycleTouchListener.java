@@ -17,11 +17,9 @@ public class RecycleTouchListener implements RecyclerView.OnItemTouchListener {
         void onLongClick(View view, int position);
     }
 
-    // Tahapan 4: Membuat Action Click untuk RecyclerView
-    public RecyclerTouchListener(Context context, final RecyclerView recyclerView, final ClickListener clickListener) {
+    public RecycleTouchListener(Context context, final RecyclerView recyclerView, final ClickListener clickListener) {
         this.clickListener = clickListener;
 
-        // Tahapan 6: Membuat Gesture Detector dengan SimpleGestureDetector
         gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onSingleTapUp(MotionEvent e) {
