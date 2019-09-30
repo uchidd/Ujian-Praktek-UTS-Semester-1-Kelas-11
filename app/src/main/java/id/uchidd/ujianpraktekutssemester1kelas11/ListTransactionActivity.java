@@ -41,8 +41,6 @@ public class ListTransactionActivity extends AppCompatActivity {
 
         rv_listtransaction.setAdapter(AdapterListTransaction);
 
-        toggleEmptyNote();
-
         rv_listtransaction.addOnItemTouchListener(new RecycleTouchListener(this,
                 rv_listtransaction, new RecycleTouchListener.ClickListener() {
             @Override
@@ -55,7 +53,5 @@ public class ListTransactionActivity extends AppCompatActivity {
 
             }
         }));
-    }
-    private void toggleEmptyNote() {
     }
 }
