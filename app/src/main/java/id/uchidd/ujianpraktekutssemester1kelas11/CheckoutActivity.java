@@ -94,12 +94,12 @@ public class CheckoutActivity extends AppCompatActivity {
         pushData (getBrand, getName, getColor, getUkuran, getJumlahBeli, getTotalHargaText);
     }
 
-    public void pushData(String brand, String text1, Integer text2, Integer text3, Integer text4 String price) {
+    public void pushData(String brand, String text1, String text2, Integer text3, Integer text4, String price ) {
 
         final Bundle bundle = new Bundle();
         bundle.putString("BRAND", brand);
         bundle.putString("NAME", text1);
-        bundle.putInt("COLOR", text2);
+        bundle.putString("COLOR", text2);
         bundle.putInt("UKURAN", text3);
         bundle.putInt("JUMLAHBELI", text4);
         bundle.putString("TOTALHARGATEXT", price);
