@@ -2,17 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_layout_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#A01D26"
+    android:orientation="vertical"
     tools:context=".ListTransactionActivity">
 
     <android.support.v7.widget.CardView
-        app:cardCornerRadius="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:backgroundTint="#ACBEBE"
+        app:cardCornerRadius="10dp"
         app:cardElevation="13dp"
         app:cardMaxElevation="13dp">
 
@@ -27,40 +28,40 @@
 
                 <ImageView
                     android:id="@+id/ivBackCB"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/back"
-                    android:layout_weight="1"
                     android:layout_width="50dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/back" />
 
                 <android.support.v7.widget.CardView
-                    app:cardCornerRadius="10dp"
-                    android:layout_weight="10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="10"
                     android:backgroundTint="#20232A"
-                    android:elevation="10dp"/>
+                    android:elevation="10dp"
+                    app:cardCornerRadius="10dp" />
 
                 <ImageView
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/search"
                     android:layout_width="50dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/search" />
 
             </LinearLayout>
 
             <TextView
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="List Transaction"
+                android:textColor="#ACBEBE"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                android:typeface="monospace"
-                android:textColor="#ACBEBE"/>
+                android:typeface="monospace" />
 
         </RelativeLayout>
 
@@ -69,13 +70,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#A01D26">
+        android:background="#A01D26"
+        android:orientation="vertical">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rvList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
