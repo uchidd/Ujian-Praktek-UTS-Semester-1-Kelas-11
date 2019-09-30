@@ -55,8 +55,8 @@ public class CheckoutActivity extends AppCompatActivity {
         String getName = getData.getString("NAME");
         String getColor = getData.getString("COLOR");
         String getPrice = getData.getString("PRICE");
-        String getUkuran = getData.getString("UKURAN");
-        String getJumlahBeli = getData.getString("JUMLAHBELI");
+        int getUkuran = getData.getInt("UKURAN");
+        int getJumlahBeli = getData.getInt("JUMLAHBELI");
         String getTotalHargaText = getData.getString("TOTALHARGATEXT");
         String getNama = getData.getString("NAMA");
         String getTelp = getData.getString("TELP");
@@ -65,12 +65,19 @@ public class CheckoutActivity extends AppCompatActivity {
         String getTax = getData.getString("TAX");
         String getPembayaran = getData.getString("PEMBAYARAN");
 
+        String subtotalString = getTotalHargaText.replaceAll("[^0-9]", "");
+        int subtotalInt = Integer.parseInt(subtotalString);
+        String taxString = getTax.replaceAll("[^0-9]", "");
+        int taxInt = Integer.parseInt(taxString);
+        int totalInt = subtotalInt + taxInt;
+        String totalString = "IDR " + totalInt;
+
         tvDetail1.setText(getBrand);
         tvDetail2.setText(getName);
         tvDetail3.setText(getColor);
         tvDetail4.setText(getPrice);
-        tvDetail5.setText(getUkuran);
-        tvDetail6.setText(getJumlahBeli);
+        tvDetail5.setText("" + getUkuran);
+        tvDetail6.setText("" + getJumlahBeli);
         tvDetail7.setText(getTotalHargaText);
 
         tvCheckout1.setText(getNama);
@@ -79,5 +86,6 @@ public class CheckoutActivity extends AppCompatActivity {
         tvCheckout4.setText(getPengiriman);
         tvCheckout5.setText(getTax);
         tvCheckout6.setText(getPembayaran);
+        tvCheckout7.setText(totalString);
     }
 }
