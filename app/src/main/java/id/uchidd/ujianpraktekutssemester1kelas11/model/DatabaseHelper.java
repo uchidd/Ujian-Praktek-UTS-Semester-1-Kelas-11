@@ -26,14 +26,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         // create notes table
-        db.execSQL(List.CREATE_TABLE);
+        db.execSQL(ListTransaction.CREATE_TABLE);
     }
 
     // Upgrading database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if existed
-        db.execSQL("DROP TABLE IF EXISTS " + List.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + ListTransaction.TABLE_NAME);
 
         // Create tables again
         onCreate(db);
@@ -59,23 +59,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         // `id` and `timestamp` will be inserted automatically.
         // no need to add them
-        values.put(List.COLUMN_BRAND, brand);
-        values.put(List.COLUMN_NAME, name);
-        values.put(List.COLUMN_COLOR, color);
-        values.put(List.COLUMN_PRICE, price);
-        values.put(List.COLUMN_SIZE, size);
-        values.put(List.COLUMN_QUANTITY, quantity);
-        values.put(List.COLUMN_SUBTOTAL, subtotal);
-        values.put(List.COLUMN_RECIPIENT, recipient);
-        values.put(List.COLUMN_PHONE, phone);
-        values.put(List.COLUMN_ADDRESS, address);
-        values.put(List.COLUMN_METHODSHIPPING, methodshipping);
-        values.put(List.COLUMN_TAX, tax);
-        values.put(List.COLUMN_METHODPAYMENT, methodpayment);
-        values.put(List.COLUMN_TOTAL, total);
+        values.put(ListTransaction.COLUMN_BRAND, brand);
+        values.put(ListTransaction.COLUMN_NAME, name);
+        values.put(ListTransaction.COLUMN_COLOR, color);
+        values.put(ListTransaction.COLUMN_PRICE, price);
+        values.put(ListTransaction.COLUMN_SIZE, size);
+        values.put(ListTransaction.COLUMN_QUANTITY, quantity);
+        values.put(ListTransaction.COLUMN_SUBTOTAL, subtotal);
+        values.put(ListTransaction.COLUMN_RECIPIENT, recipient);
+        values.put(ListTransaction.COLUMN_PHONE, phone);
+        values.put(ListTransaction.COLUMN_ADDRESS, address);
+        values.put(ListTransaction.COLUMN_METHODSHIPPING, methodshipping);
+        values.put(ListTransaction.COLUMN_TAX, tax);
+        values.put(ListTransaction.COLUMN_METHODPAYMENT, methodpayment);
+        values.put(ListTransaction.COLUMN_TOTAL, total);
 
         // insert row
-        long id = db.insert(List.TABLE_NAME, null, values);
+        long id = db.insert(ListTransaction.TABLE_NAME, null, values);
 
         // close db connection
         db.close();
@@ -84,53 +84,53 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return id;
     }
 
-    public List getNote(long id) {
+    public ListTransaction getNote(long id) {
         // get readable database as we are not inserting anything
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursor = db.query(List.TABLE_NAME,
+        Cursor cursor = db.query(ListTransaction.TABLE_NAME,
                 new String[]{
-                        List.COLUMN_ID,
-                        List.COLUMN_BRAND,
-                        List.COLUMN_NAME,
-                        List.COLUMN_COLOR,
-                        List.COLUMN_PRICE,
-                        List.COLUMN_SIZE,
-                        List.COLUMN_QUANTITY,
-                        List.COLUMN_SUBTOTAL,
-                        List.COLUMN_RECIPIENT,
-                        List.COLUMN_PHONE,
-                        List.COLUMN_ADDRESS,
-                        List.COLUMN_METHODSHIPPING,
-                        List.COLUMN_TAX,
-                        List.COLUMN_METHODPAYMENT,
-                        List.COLUMN_TOTAL,
-                        List.COLUMN_TRANSACTIONDATE
+                        ListTransaction.COLUMN_ID,
+                        ListTransaction.COLUMN_BRAND,
+                        ListTransaction.COLUMN_NAME,
+                        ListTransaction.COLUMN_COLOR,
+                        ListTransaction.COLUMN_PRICE,
+                        ListTransaction.COLUMN_SIZE,
+                        ListTransaction.COLUMN_QUANTITY,
+                        ListTransaction.COLUMN_SUBTOTAL,
+                        ListTransaction.COLUMN_RECIPIENT,
+                        ListTransaction.COLUMN_PHONE,
+                        ListTransaction.COLUMN_ADDRESS,
+                        ListTransaction.COLUMN_METHODSHIPPING,
+                        ListTransaction.COLUMN_TAX,
+                        ListTransaction.COLUMN_METHODPAYMENT,
+                        ListTransaction.COLUMN_TOTAL,
+                        ListTransaction.COLUMN_TRANSACTIONDATE
                 },
-                List.COLUMN_ID + "=?",
+                ListTransaction.COLUMN_ID + "=?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
 
         if (cursor != null)
             cursor.moveToFirst();
 
         // prepare note object
-        List list = new List(
-                cursor.getInt(cursor.getColumnIndex(List.COLUMN_ID)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_BRAND)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_NAME)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_COLOR)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_PRICE)),
-                cursor.getInt(cursor.getColumnIndex(List.COLUMN_SIZE)),
-                cursor.getInt(cursor.getColumnIndex(List.COLUMN_QUANTITY)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_SUBTOTAL)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_RECIPIENT)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_PHONE)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_ADDRESS)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_METHODSHIPPING)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_TAX)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_METHODPAYMENT)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_TOTAL)),
-                cursor.getString(cursor.getColumnIndex(List.COLUMN_TRANSACTIONDATE)));
+        ListTransaction list = new ListTransaction(
+                cursor.getInt(cursor.getColumnIndex(ListTransaction.COLUMN_ID)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_BRAND)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_NAME)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_COLOR)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_PRICE)),
+                cursor.getInt(cursor.getColumnIndex(ListTransaction.COLUMN_SIZE)),
+                cursor.getInt(cursor.getColumnIndex(ListTransaction.COLUMN_QUANTITY)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_SUBTOTAL)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_RECIPIENT)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_PHONE)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_ADDRESS)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_METHODSHIPPING)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_TAX)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_METHODPAYMENT)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_TOTAL)),
+                cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_TRANSACTIONDATE)));
         // close the db connection
         cursor.close();
 
@@ -141,8 +141,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         java.util.List notes = new ArrayList<>();
 
         // Select All Query
-        String selectQuery = "SELECT  * FROM " + List.TABLE_NAME + " ORDER BY " +
-                List.COLUMN_TRANSACTIONDATE + " DESC";
+        String selectQuery = "SELECT  * FROM " + ListTransaction.TABLE_NAME + " ORDER BY " +
+                ListTransaction.COLUMN_TRANSACTIONDATE + " DESC";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -150,23 +150,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                List list = new List();
-                list.setId(cursor.getInt(cursor.getColumnIndex(List.COLUMN_ID)));
-                list.setBrand(cursor.getString(cursor.getColumnIndex(List.COLUMN_BRAND)));
-                list.setName(cursor.getString(cursor.getColumnIndex(List.COLUMN_NAME)));
-                list.setColor(cursor.getString(cursor.getColumnIndex(List.COLUMN_COLOR)));
-                list.setPrice(cursor.getString(cursor.getColumnIndex(List.COLUMN_PRICE)));
-                list.setSize(cursor.getInt(cursor.getColumnIndex(List.COLUMN_SIZE)));
-                list.setQuantity(cursor.getInt(cursor.getColumnIndex(List.COLUMN_QUANTITY)));
-                list.setSubtotal(cursor.getString(cursor.getColumnIndex(List.COLUMN_SUBTOTAL)));
-                list.setRecipient(cursor.getString(cursor.getColumnIndex(List.COLUMN_RECIPIENT)));
-                list.setPhone(cursor.getString(cursor.getColumnIndex(List.COLUMN_PHONE)));
-                list.setAddress(cursor.getString(cursor.getColumnIndex(List.COLUMN_ADDRESS)));
-                list.setMethodshipping(cursor.getString(cursor.getColumnIndex(List.COLUMN_METHODSHIPPING)));
-                list.setTax(cursor.getString(cursor.getColumnIndex(List.COLUMN_TAX)));
-                list.setMethodpayment(cursor.getString(cursor.getColumnIndex(List.COLUMN_METHODPAYMENT)));
-                list.setTotal(cursor.getString(cursor.getColumnIndex(List.COLUMN_TOTAL)));
-                list.setTransactiondate(cursor.getString(cursor.getColumnIndex(List.COLUMN_TRANSACTIONDATE)));
+                ListTransaction list = new ListTransaction();
+                list.setId(cursor.getInt(cursor.getColumnIndex(ListTransaction.COLUMN_ID)));
+                list.setBrand(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_BRAND)));
+                list.setName(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_NAME)));
+                list.setColor(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_COLOR)));
+                list.setPrice(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_PRICE)));
+                list.setSize(cursor.getInt(cursor.getColumnIndex(ListTransaction.COLUMN_SIZE)));
+                list.setQuantity(cursor.getInt(cursor.getColumnIndex(ListTransaction.COLUMN_QUANTITY)));
+                list.setSubtotal(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_SUBTOTAL)));
+                list.setRecipient(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_RECIPIENT)));
+                list.setPhone(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_PHONE)));
+                list.setAddress(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_ADDRESS)));
+                list.setMethodshipping(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_METHODSHIPPING)));
+                list.setTax(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_TAX)));
+                list.setMethodpayment(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_METHODPAYMENT)));
+                list.setTotal(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_TOTAL)));
+                list.setTransactiondate(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_TRANSACTIONDATE)));
 
                 notes.add(list);
             } while (cursor.moveToNext());
@@ -180,7 +180,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public int getNotesCount() {
-        String countQuery = "SELECT  * FROM " + List.TABLE_NAME;
+        String countQuery = "SELECT  * FROM " + ListTransaction.TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
 
@@ -192,20 +192,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
-    public int updateNote(List list) {
+    public int updateNote(ListTransaction list) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(List.COLUMN_NAME, list.getName());
+        values.put(ListTransaction.COLUMN_NAME, list.getName());
 
         // updating row
-        return db.update(List.TABLE_NAME, values, List.COLUMN_ID + " = ?",
+        return db.update(ListTransaction.TABLE_NAME, values, ListTransaction.COLUMN_ID + " = ?",
                 new String[]{String.valueOf(list.getId())});
     }
 
-    public void deleteNote(List list) {
+    public void deleteNote(ListTransaction list) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(List.TABLE_NAME, List.COLUMN_ID + " = ?",
+        db.delete(ListTransaction.TABLE_NAME, ListTransaction.COLUMN_ID + " = ?",
                 new String[]{String.valueOf(list.getId())});
         db.close();
     }
