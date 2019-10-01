@@ -91,28 +91,29 @@ public class CheckoutActivity extends AppCompatActivity {
         tvCheckout6.setText(getPembayaran);
         tvCheckout7.setText(totalString);
 
-        pushData (getBrand, getName, getColor, getUkuran, getJumlahBeli, getTotalHargaText,
+        pushData (getBrand, getName, getColor, getPrice, getUkuran, getJumlahBeli, getTotalHargaText,
                 getNama, getTelp, getAlamat, getPengiriman, getTax, getPembayaran, totalString);
     }
 
-    public void pushData(String brand, String text1, String text2, Integer text3, Integer text4, String text5,
-                         String text6, String text7, String text8, String text9, String text10, String text11, String text12) {
+    public void pushData(String brand, String text1, String text2, String text3, Integer text4, Integer text5,
+                         String text6, String text7, String text8, String text9, String text10, String text11, String text12, String text13) {
 
         final Bundle bundle = new Bundle();
         bundle.putString("BRAND", brand);
         bundle.putString("NAME", text1);
         bundle.putString("COLOR", text2);
-        bundle.putInt("UKURAN", text3);
-        bundle.putInt("JUMLAHBELI", text4);
-        bundle.putString("TOTALHARGATEXT", text5);
+        bundle.putString("PRICE", text3);
+        bundle.putInt("UKURAN", text4);
+        bundle.putInt("JUMLAHBELI", text5);
+        bundle.putString("TOTALHARGATEXT", text6);
 
-        bundle.putString("NAMA", text6);
-        bundle.putString("TELP", text7);
-        bundle.putString("ALAMAT", text8);
-        bundle.putString("PENGIRIMAN", text9);
-        bundle.putString("TAX", text10);
-        bundle.putString("PEMBAYARAN", text11);
-        bundle.putString("TOTAL", text12);
+        bundle.putString("NAMA", text7);
+        bundle.putString("TELP", text8);
+        bundle.putString("ALAMAT", text9);
+        bundle.putString("PENGIRIMAN", text10);
+        bundle.putString("TAX", text11);
+        bundle.putString("PEMBAYARAN", text12);
+        bundle.putString("TOTAL", text13);
 
         cvSaveTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
