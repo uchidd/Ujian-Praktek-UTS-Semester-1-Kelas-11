@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -39,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long insertNote(String brand,
+    public long insertList(String brand,
                            String name,
                            String color,
                            String price,
@@ -84,7 +85,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return id;
     }
 
-    public ListTransaction getNote(long id) {
+    public ListTransaction getList(long id) {
         // get readable database as we are not inserting anything
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -137,8 +138,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return list;
     }
 
-    public java.util.List getAllNotes() {
-        java.util.List notes = new ArrayList<>();
+    public List<ListTransaction> getAllNotes() {
+        List<ListTransaction> lists = new ArrayList<>();
 
         // Select All Query
         String selectQuery = "SELECT  * FROM " + ListTransaction.TABLE_NAME + " ORDER BY " +
@@ -168,7 +169,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 list.setTotal(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_TOTAL)));
                 list.setTransactiondate(cursor.getString(cursor.getColumnIndex(ListTransaction.COLUMN_TRANSACTIONDATE)));
 
-                notes.add(list);
+                lists.add(list);
             } while (cursor.moveToNext());
         }
 
@@ -176,10 +177,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
 
         // return notes list
-        return notes;
+        return lists;
     }
 
-    public int getNotesCount() {
+    public int getListsCount() {
         String countQuery = "SELECT  * FROM " + ListTransaction.TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
@@ -192,7 +193,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
-    public int updateNote(ListTransaction list) {
+    public int updateList(ListTransaction list) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -203,7 +204,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(list.getId())});
     }
 
-    public void deleteNote(ListTransaction list) {
+    public void deleteList(ListTransaction list) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(ListTransaction.TABLE_NAME, ListTransaction.COLUMN_ID + " = ?",
                 new String[]{String.valueOf(list.getId())});

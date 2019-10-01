@@ -90,6 +90,18 @@ public class ListTransactionActivity extends AppCompatActivity {
         }));
     }
 
+    private void createList (String list) {
+        long id = db.insertList(list);
+
+        ListTransaction getIdList = db.getList(id);
+
+        if (getIdList != null) {
+            ListTransaction.add(0, getIdList);
+            AdapterListTransaction.notifyDataSetChanged();
+
+        }
+    }
+
     private void hideSystemUI() {
         // Enables regular immersive mode.
         // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
@@ -117,5 +129,3 @@ public class ListTransactionActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
     }
 }
-
-//Test
