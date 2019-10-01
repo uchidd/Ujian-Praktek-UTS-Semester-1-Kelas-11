@@ -1,25 +1,27 @@
 package id.uchidd.ujianpraktekutssemester1kelas11.model;
 
+import android.os.Bundle;
+
 public class ListTransaction {
 
-    public static final String TABLE_NAME = "tbl_list_transaction" ;
+    public static final String TABLE_NAME = "tbl_list_transaction";
 
-    public static final String COLUMN_ID = "id" ;
-    public static final String COLUMN_BRAND = "brand" ;
-    public static final String COLUMN_NAME = "name" ;
-    public static final String COLUMN_COLOR = "color" ;
-    public static final String COLUMN_PRICE = "price" ;
-    public static final String COLUMN_SIZE = "size" ;
-    public static final String COLUMN_QUANTITY = "quantity" ;
-    public static final String COLUMN_SUBTOTAL = "subtotal" ;
-    public static final String COLUMN_RECIPIENT = "recipient" ;
-    public static final String COLUMN_PHONE = "phone" ;
-    public static final String COLUMN_ADDRESS = "address" ;
-    public static final String COLUMN_METHODSHIPPING = "methodshipping" ;
-    public static final String COLUMN_TAX = "tax" ;
-    public static final String COLUMN_METHODPAYMENT = "methodpayment" ;
-    public static final String COLUMN_TOTAL = "total" ;
-    public static final String COLUMN_TRANSACTIONDATE = "transactiondate" ;
+    public static final String COLUMN_ID = "id";
+    public static final String COLUMN_BRAND = "brand";
+    public static final String COLUMN_NAME = "name";
+    public static final String COLUMN_COLOR = "color";
+    public static final String COLUMN_PRICE = "price";
+    public static final String COLUMN_SIZE = "size";
+    public static final String COLUMN_QUANTITY = "quantity";
+    public static final String COLUMN_SUBTOTAL = "subtotal";
+    public static final String COLUMN_RECIPIENT = "recipient";
+    public static final String COLUMN_PHONE = "phone";
+    public static final String COLUMN_ADDRESS = "address";
+    public static final String COLUMN_METHODSHIPPING = "methodshipping";
+    public static final String COLUMN_TAX = "tax";
+    public static final String COLUMN_METHODPAYMENT = "methodpayment";
+    public static final String COLUMN_TOTAL = "total";
+    public static final String COLUMN_TRANSACTIONDATE = "transactiondate";
 
     private int id;
     private String brand;
@@ -226,7 +228,6 @@ public class ListTransaction {
     public void setTransactiondate(String transactiondate) {
         this.transactiondate = transactiondate;
     }
-
 
 
 }
