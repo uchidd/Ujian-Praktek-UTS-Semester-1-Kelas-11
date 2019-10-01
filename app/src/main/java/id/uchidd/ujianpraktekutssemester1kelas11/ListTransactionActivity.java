@@ -40,6 +40,22 @@ public class ListTransactionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_transaction);
         ButterKnife.bind(this);
 
+        Bundle getData = getIntent().getExtras();
+        String getBrand = getData.getString("BRAND");
+        String getName = getData.getString("NAME");
+        String getColor = getData.getString("COLOR");
+        String getPrice = getData.getString("PRICE");
+        int getUkuran = getData.getInt("UKURAN");
+        int getJumlahBeli = getData.getInt("JUMLAHBELI");
+        String getTotalHargaText = getData.getString("TOTALHARGATEXT");
+        String getNama = getData.getString("NAMA");
+        String getTelp = getData.getString("TELP");
+        String getAlamat = getData.getString("ALAMAT");
+        String getPengiriman = getData.getString("PENGIRIMAN");
+        String getTax = getData.getString("TAX");
+        String getPembayaran = getData.getString("PEMBAYARAN");
+        String getTotal = getData.getString("TOTAL");
+
         linearLayout = (LinearLayout) findViewById(R.id.linear_layout_main);
         rv_listtransaction = (RecyclerView) findViewById(R.id.rvList);
 
@@ -64,20 +80,5 @@ public class ListTransactionActivity extends AppCompatActivity {
 
             }
         }));
-
-//        Bundle getData = getIntent().getExtras();
-//        String getBrand = getData.getString("BRAND");
-//        String getName = getData.getString("NAME");
-//        String getColor = getData.getString("COLOR");
-//        String getUkuran = getData.getString("UKURAN");
-//        String getJumlahBeli = getData.getString("JUMLAHBELI");
-//        String getTotalHargaText = getData.getString("TOTALHARGATEXT");
-//
-//        tv1.setText(getBrand);
-//        tv2.setText(getName);
-//        tv3.setText(getColor);
-//        tv4.setText(getUkuran);
-//        tv5.setText(getJumlahBeli);
-//        tv6.setText(getTotalHargaText);
     }
 }

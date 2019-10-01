@@ -106,7 +106,6 @@ public class CheckoutActivity extends AppCompatActivity {
         bundle.putInt("UKURAN", text4);
         bundle.putInt("JUMLAHBELI", text5);
         bundle.putString("TOTALHARGATEXT", text6);
-
         bundle.putString("NAMA", text7);
         bundle.putString("TELP", text8);
         bundle.putString("ALAMAT", text9);
@@ -114,8 +113,6 @@ public class CheckoutActivity extends AppCompatActivity {
         bundle.putString("TAX", text11);
         bundle.putString("PEMBAYARAN", text12);
         bundle.putString("TOTAL", text13);
-
-        //Rizki Khaerul
 
         cvSaveTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
