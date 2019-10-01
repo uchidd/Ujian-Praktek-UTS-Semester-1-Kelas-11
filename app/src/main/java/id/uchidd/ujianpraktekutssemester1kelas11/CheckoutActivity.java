@@ -91,12 +91,10 @@ public class CheckoutActivity extends AppCompatActivity {
         tvCheckout6.setText(getPembayaran);
         tvCheckout7.setText(totalString);
 
-        pushData (getBrand, getName, getColor, getUkuran, getJumlahBeli, getTotalHargaText,
-                getNama, getTelp, getAlamat, getPengiriman, getTax, getPembayaran, totalString);
+        pushData (getBrand, getName, getColor, getUkuran, getJumlahBeli, getTotalHargaText);
     }
 
-    public void pushData(String brand, String text1, String text2, Integer text3, Integer text4, String text5,
-                         String text6, String text7, String text8, String text9, String text10, String text11, String text12) {
+    public void pushData(String brand, String text1, String text2, Integer text3, Integer text4, String price ) {
 
         final Bundle bundle = new Bundle();
         bundle.putString("BRAND", brand);
