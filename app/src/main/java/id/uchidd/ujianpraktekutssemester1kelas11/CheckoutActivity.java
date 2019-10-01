@@ -115,6 +115,8 @@ public class CheckoutActivity extends AppCompatActivity {
         bundle.putString("PEMBAYARAN", text12);
         bundle.putString("TOTAL", text13);
 
+        //Rizki Khaerul
+
         cvSaveTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
